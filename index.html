@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    
-</head>
-    <!-- flexbox sizing -->
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>My Portfolio Webpage</title>
+
+  <!-- Bold text for flexbox and font size-->
+   <style>
+      h2.thick {
+        font-weight: bold;
+        font-size: 42px;
+}
+    </style>    
+    <!-- flexbox container sizing -->
+  <style>
     .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background-color: rgb(255, 0, 0);
+      background-color: rgb(197, 9, 40);
     }
-
+    /* Title for Box*/
     .item {
       width: 200px;
       height: 200px;
       margin: 10px;
       background-color: rgba(235, 255, 53, 0.904);
-      font-size: 36px;
+      font-size: 46px;
       text-align: center;
       line-height: 200px;
+      font-weight: bold;
     }
 
     @media (max-width: 600px) {
@@ -35,46 +41,61 @@
         width: 100%;
       }
     }
-    </style>
+  </style>
 </head>
-
 <body>
-    <!--T Portfolio Title-->
-    <h1 style="font-size: 115px; font-weight: bold;"> Vincent's
-        <span class="seo">Portfolio</span>
-        
+  </div>
+    <!-- Portfolio Title-->
+    <h1 class="w3-text-orange" style="text-shadow:1px 1px 0 #444">
+      <b>Vincent Ma</b>
+    <!-- Imported button link repositories -->
+      <form action="https://github.com/guoma532?tab=repositories">
+        <button type="submit">
+          <div 
+          class="myButton">Portfolio
+        </div>
+      </button>    
+    </form>     
+  </h1>      
     <!-- Create a flex container with four flex items -->
     <div class="container">
-        <div class="item" onclick="openTab('b1');">About Me</div>
-        <div class="item" onclick="openTab('b2');">Education</div>
-        <div class="item" onclick="openTab('b3');">Experience</div>
-        <div class="item" onclick="openTab('b4');">Contact Me</div>
+      <div class="item" onclick="openTab('b1');">About Me</div>
+      <div class="item" onclick="openTab('b2');">Education</div>
+      <div class="item" onclick="openTab('b3');">Experience</div>
+      <div class="item" onclick="openTab('b4');">Contact Me</div>
+      <div class="item" onclick="openTab('b5');">Home</div>
     </div>
     </h1>
+    <!-- The expanding grid box -->
+    <div id="b1" class="containerTab" style="display:none;background: #3fa8ff">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2 class="thick">Welcome to my Webpage</h2>
+          <p>My name is Vincent, I'm an experienced Html, Css, and JavaScript web devoloper</p>
+    </div>
+      <div id="b2" class="containerTab" style="display:none;background:rgb(76, 118, 255)">
+       <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2 class="thick">UofT SCS Coding Boot Camp </h2>
+          <p> 6 month coding boot camp at UofT SCS</p>
+          <p> Topics include: Html, Css, and JavaScript</p>
+    </div>
+    
+    <div id="b3" class="containerTab" style="display:none;background:#3fa8ff">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2 class="thick">Work Experience</h2>
+           <p>1 year cashier and cook at McDonald's Restaurant</p>
+           <p>1 year assembly line at TStech Manufacture</p>
+    </div>
 
+    <div id="b4" class="containerTab" style="display:none;background:rgb(206, 104, 180)">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2 class="thick">Contact Info</h2>
+        <p>guoma532@gmail.com</p>
+        <p>647-638-4854</p>
+    </div>
 
-  <!-- The expanding grid box -->
-<div id="b1" class="containerTab" style="display:none;background:rgb(0, 194, 0)">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h2>Interest</h2>
-    <p>Lorem ipsum..</p>
-</div>
-
-<div id="b2" class="containerTab" style="display:none;background:rgb(60, 105, 255)">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h2>Background</h2>
-    <p>asdfas ipsum..</p>
-</div>
-  
-<div id="b3" class="containerTab" style="display:none;background:rgb(175, 175, 175)">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h2>Work</h2>
-    <p>Lorem ipsum..</p>
-</div>
-<div id="b4" class="containerTab" style="display:none;background:rgb(179, 0, 134)">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-    <h2>Contact</h2>
-    <p>Lorem ipsum..</p>
-<script src="assets/script.js"></script>
-</body>
+    <div id="b5" class="containerTab" style="display:none;">
+        <span onclick="this.parentElement.style.display='none'" class="none">x</span>
+    </div>
+      <script src="assets/script.js"></script>
+    </body>
 </html>
