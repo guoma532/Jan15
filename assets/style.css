@@ -70,7 +70,28 @@ h1 {
     .item {
       flex-grow: 1;
       flex-basis: 0;
-
+      color: rgb(32, 32, 32); 
+      font-size: 40px; 
+      line-height: 50px; 
+      padding: 20px; 
+      border-radius: 10px; 
+      font-family: Georgia, serif; 
+      font-weight: normal; 
+      text-decoration: none; 
+      font-style: normal; 
+      font-variant: normal; 
+      text-transform: none; 
+      background-image: linear-gradient(to right, hsl(64, 87%, 39%) 0%, #e0dd2e 50%, rgb(212, 231, 37) 100%); 
+      box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+      border: 2px solid rgb(251, 255, 213); 
+      display: inline-block;}
+      .myButton:hover {
+      background: #1C6EA4; }
+      .myButton:active {
+      background: #144E75;
+      
+      
+      /* #ebff35e7 */
     }
     
     /*Color for seo title*/
